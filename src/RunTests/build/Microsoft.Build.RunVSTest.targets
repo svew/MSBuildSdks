@@ -11,6 +11,7 @@
 				  TestFileFullPath="$(TargetPath)"
 				  VSTestSetting="$(VSTestSetting)"
 				  VSTestTestAdapterPath="$(VSTestTestAdapterPath)"
+				  VSTestTestAdapterLoadingStrategy="$(VSTestTestAdapterLoadingStrategy)"
 				  VSTestFramework="$(VSTestFramework)"
 				  VSTestPlatform="$(VSTestPlatform)"
 				  VSTestTestCaseFilter="$(VSTestTestCaseFilter)"

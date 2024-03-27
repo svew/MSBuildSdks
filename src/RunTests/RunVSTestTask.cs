@@ -31,6 +31,11 @@ namespace Microsoft.Build
         public string[] VSTestTestAdapterPath { get; set; }
 
         /// <summary>
+        /// Gets or Sets Paths to test loading strategy.
+        /// </summary>
+        public string VSTestTestAdapterLoadingStrategy { get; set; }
+
+        /// <summary>
         /// Gets or Sets Framework for VSTest.
         /// </summary>
         public string VSTestFramework { get; set; }
@@ -169,6 +174,11 @@ namespace Microsoft.Build
                 {
                     commandLineBuilder.AppendSwitchIfNotNull("--testAdapterPath:", arg);
                 }
+            }
+
+            if (!string.IsNullOrEmpty(VSTestTestAdapterLoadingStrategy))
+            {
+                commandLineBuilder.AppendSwitchIfNotNull("--testAdapterLoadingStrategy:", VSTestTestAdapterLoadingStrategy);
             }
 
             if (!string.IsNullOrEmpty(VSTestFramework))
